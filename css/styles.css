@@ -5,13 +5,22 @@
       --font-principal: 'Poppins', sans-serif;
       --font-secundaria: 'Roboto', sans-serif;
   }
-  
+
+  body{
+    box-sizing: border-box;
+  }
+
+
 
 .categorias_Header {
     margin-top: 2rem;
     display: flex;
     justify-content: space-around;
     font-family: var(--font-principal);
+}
+
+.categorias_HeaderMobile{
+    display: none;
 }
 
 .lista_Laika {
@@ -38,6 +47,8 @@
 .texto_Laika{
     font-size: 44px;
     text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+    color: black;
 }
 
 .box_Video{
@@ -45,6 +56,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     font-family: var(--font-secundaria);
     height: 60vh;
     gap: 1rem;
@@ -137,4 +149,42 @@
     color: white;
     font-family: var(--font-secundaria);
     font-weight: 900;
+}
+
+@media screen and (max-width:430px) {
+
+    .categorias_HeaderMobile{
+        display: flex;
+        margin: 1rem 0.5rem 1rem 0.5rem;
+        justify-content: space-evenly;
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .ancora_HeaderMobile {
+        text-decoration: none;
+        color: black;
+        font-family: var(--font-principal);
+    }
+
+    .ancora_Header{
+        display: none;
+    }
+    
+   .box_Section1{
+    gap: 0px;
+    padding: 0px;
+    margin: 0.7rem 0px 0.7rem 0px;
+   }
+
+   .div_Section1{
+    font-size: 1rem;
+   }
+
+   .box_About{
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+   }
+
 }
